@@ -186,7 +186,7 @@ class BEA_Postman {
 	 * @return bool
 	 * @author Nicolas Juen
 	 */
-	public function send_basic_mail() {
+	public function send() {
 		if ( empty( $this->email ) || empty( $this->subject ) || empty( $this->template ) ) {
 			return false;
 		}
