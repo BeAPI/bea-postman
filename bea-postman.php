@@ -215,7 +215,7 @@ class BEA_Postman {
 		do_action( 'bea_postman_before_send', $this );
 
 		$mailed = false;
-		if ( true === apply_filters( 'bea_postman_before_send', true, $this ) ) {
+		if ( true === apply_filters( 'bea_postman_send', true, $this ) ) {
 			/**
 			 * Send email to the given email
 			 */
