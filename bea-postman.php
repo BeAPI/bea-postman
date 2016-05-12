@@ -187,7 +187,7 @@ class BEA_Postman {
 	 * @author Nicolas Juen
 	 */
 	public function send() {
-		if ( empty( $this->email ) || empty( $this->subject ) || empty( $this->template ) ) {
+		if ( empty( $this->emails ) || empty( $this->subject ) || empty( $this->template ) ) {
 			return false;
 		}
 
