@@ -2,7 +2,7 @@
 
 /*
  Plugin Name: BEA Postman
- Version: 0.1
+ Version: 0.1.1
  Plugin URI: https://github.com/BeAPI/bea-postman
  Description: Postman class for templating and sending emails
  Author: Beapi
@@ -10,7 +10,7 @@
 
  ----
 
- Copyright 2015 Beapi Technical team (technique@beapi.fr)
+ Copyright 2016 Beapi Technical team (technique@beapi.fr)
 
  This program is free software; you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by
@@ -125,7 +125,7 @@ class BEA_Postman {
 		}
 
 		// Locate from the theme
-		$located = locate_template( array( '/bea-postman/' . $tpl . '-html.tpl' ), false, false );
+		$located = apply_filters( 'bea_postman_locate_template', locate_template( array( '/bea-postman/' . $tpl . '-html.tpl' ), false, false ), $tpl );
 		if ( ! empty( $located ) ) {
 			return $located;
 		}
@@ -187,7 +187,7 @@ class BEA_Postman {
 	 * @author Nicolas Juen
 	 */
 	public function send() {
-		if ( empty( $this->email ) || empty( $this->subject ) || empty( $this->template ) ) {
+		if ( empty( $this->emails ) || empty( $this->subject ) || empty( $this->template ) ) {
 			return false;
 		}
 

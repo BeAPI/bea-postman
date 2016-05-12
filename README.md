@@ -3,7 +3,7 @@ WordPress class for replacements and mail sender
 
 Usage
 -----
-There is two use cases for this class, the one is basic, specifying the recipients, data and message, then send. The otheer one is to use the replacement methods then send the email.
+There are two use cases for this class, the first one is basic, specifying the recipients, data and message, then send. The other one is to use the replacement methods then send the email.
 
 **Basic**
 
