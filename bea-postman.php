@@ -125,7 +125,7 @@ class BEA_Postman {
 		}
 
 		// Locate from the theme
-		$located = locate_template( array( '/bea-postman/' . $tpl . '-html.tpl' ), false, false );
+		$located = apply_filters( 'bea_postman_locate_template', locate_template( array( '/bea-postman/' . $tpl . '-html.tpl' ), false, false ), $tpl );
 		if ( ! empty( $located ) ) {
 			return $located;
 		}
