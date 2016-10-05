@@ -5,12 +5,14 @@
  Version: 0.1.1
  Plugin URI: https://github.com/BeAPI/bea-postman
  Description: Postman class for templating and sending emails
- Author: Beapi
+ Author: BE API Technical team
  Author URI: http://www.beapi.fr
+ Domain Path: languages
+ Text Domain: bea-postman
 
  ----
 
- Copyright 2016 Beapi Technical team (technique@beapi.fr)
+ Copyright 2016 BE API Technical team (human@beapi.fr)
 
  This program is free software; you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by
