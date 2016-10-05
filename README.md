@@ -1,5 +1,11 @@
-# Bea Postman
+# Bea Postman #
+
+## Description ##
+
 WordPress class for replacements and mail sender
+
+
+## Important to know ##
 
 Usage
 -----
@@ -52,3 +58,13 @@ The template file will be something like this :
 
     %%MESSAGE%%
 And so on, the message tag is replaced by the replaced message itself replaced and you can send a translated message to your users and you can change the positions of the tags based on the language.
+
+## Changelog ##
+
+### 0.1
+* 25 June 2015
+* Initial
+
+### 0.1.1
+* 12 May 2016
+* Fixed email variable name typo
