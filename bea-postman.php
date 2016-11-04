@@ -2,7 +2,7 @@
 
 /*
  Plugin Name: BEA Postman
- Version: 0.1.1
+ Version: 0.1.2
  Plugin URI: https://github.com/BeAPI/bea-postman
  Description: Postman class for templating and sending emails
  Author: BE API Technical team
@@ -298,7 +298,7 @@ class BEA_Postman {
 	 *
 	 * @return boolean|array
 	 */
-	private static function generate_content( $data = array(), $template_name ) {
+	public static function generate_content( $data = array(), $template_name ) {
 		if ( ! isset( $data ) || empty( $data ) || ! isset( $template_name ) || empty( $template_name ) ) {
 			return false;
 		}
