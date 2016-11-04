@@ -68,3 +68,7 @@ And so on, the message tag is replaced by the replaced message itself replaced a
 ### 0.1.1
 * 12 May 2016
 * Fixed email variable name typo
+
+### 0.1.2
+* 04 Nov 2016
+* Changed the generate_content to public
