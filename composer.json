@@ -1,6 +1,6 @@
 {
   "name": "bea/postman",
-  "description": "ostman class for templating and sending emails",
+  "description": "Be API Postman is a class for templating and sending emails",
   "minimum-stability": "stable",
   "license": "GPL-2.0",
   "authors": [

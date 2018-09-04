@@ -183,7 +183,7 @@ class BEA_Postman {
 	/**
  	 * Set email headers
 	 *
-	 * @param string $template
+	 * @param string|array $headers
 	*/
 	public function set_headers( $headers ) {
 		$this->headers = $headers;

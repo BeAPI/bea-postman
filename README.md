@@ -16,10 +16,10 @@ There are two use cases for this class, the first one is basic, specifying the r
     <?php
     // Create the sended
     $sender = new Bea_Postman( 'Hi !', 'foo@bar.fr', 'welcome' );
-    
+
 	// Set the data
     $sender->set_data( array( 'first_name' => 'John', 'last_name' => 'Doe' ) );
-	
+
 	// Send the email
 	$sender->send(); ?>
 
@@ -47,11 +47,11 @@ The advanced way is when you have to internationalize your message but you will 
       <?php
         // Create the sended
         $sender = new Bea_Postman( __( 'Hi !', 'textdomain' ), 'foo@bar.fr', 'welcome' );
-        
+
     	// Set the data
         $sender->set_data( array( 'first_name' => 'John', 'last_name' => 'Doe' ) );
         $sender->add_data( 'content', __( 'Hello %%FIRST_NAME%% %%LAST_NAME%%,..... ' ) );
-    	
+
     	// Send the email
     	$sender->send(); ?>
 The template file will be something like this :
@@ -72,3 +72,7 @@ And so on, the message tag is replaced by the replaced message itself replaced a
 ### 0.1.2
 * 04 Nov 2016
 * Changed the generate_content to public
+
+### 0.1.3
+* 04 Sep 2018
+* Add function to set email headers
