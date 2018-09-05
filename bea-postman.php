@@ -238,7 +238,7 @@ class BEA_Postman {
 			/**
 			 * Send email to the given email
 			 */
-			$headers = apply_filters( 'bea_postman_headers', $this->headers );
+			$headers = apply_filters( 'bea_postman_headers', $this->headers, $this );
 			$mailed  = wp_mail( $this->get_emails(), $this->get_subject(), $header . $message . $footer, $headers, $this->get_files() );
 		}
 
