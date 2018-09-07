@@ -2,7 +2,7 @@
 
 /*
  Plugin Name: BEA Postman
- Version: 0.1.2
+ Version: 0.1.3
  Plugin URI: https://github.com/BeAPI/bea-postman
  Description: Postman class for templating and sending emails
  Author: BE API Technical team
@@ -12,7 +12,7 @@
 
  ----
 
- Copyright 2016 BE API Technical team (human@beapi.fr)
+ Copyright 2018 BE API Technical team (human@beapi.fr)
 
  This program is free software; you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by
@@ -64,6 +64,14 @@ class BEA_Postman {
 	 * @var array
 	 */
 	private $data = array();
+
+	/**
+	 * Email Headers
+	 *
+	 * @var string|array
+	 * @since 0.1.3
+	 */
+	private $headers;
 
 	/**
 	 * @param $subject
@@ -173,6 +181,15 @@ class BEA_Postman {
 	}
 
 	/**
+ 	 * Set email headers
+	 *
+	 * @param string|array $headers
+	*/
+	public function set_headers( $headers ) {
+		$this->headers = $headers;
+	}
+
+	/**
 	 * Add one entry to the data array
 	 *
 	 * @param $data
@@ -221,7 +238,7 @@ class BEA_Postman {
 			/**
 			 * Send email to the given email
 			 */
-			$headers = apply_filters( 'bea_postman_headers', '' );
+			$headers = apply_filters( 'bea_postman_headers', $this->headers, $this );
 			$mailed  = wp_mail( $this->get_emails(), $this->get_subject(), $header . $message . $footer, $headers, $this->get_files() );
 		}
 
