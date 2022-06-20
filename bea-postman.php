@@ -315,7 +315,7 @@ class BEA_Postman {
 	 *
 	 * @return boolean|array
 	 */
-	public static function generate_content( $data = array(), $template_name ) {
+	public static function generate_content( $data = array(), $template_name = '' ) {
 		if ( ! isset( $data ) || empty( $data ) || ! isset( $template_name ) || empty( $template_name ) ) {
 			return false;
 		}
