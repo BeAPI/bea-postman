@@ -2,7 +2,7 @@
 
 /*
  Plugin Name: BEA Postman
- Version: 0.1.3
+ Version: 0.1.4
  Plugin URI: https://github.com/BeAPI/bea-postman
  Description: Postman class for templating and sending emails
  Author: BE API Technical team
